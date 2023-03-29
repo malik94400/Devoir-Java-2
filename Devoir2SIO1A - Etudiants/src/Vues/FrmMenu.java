@@ -15,8 +15,7 @@ public class FrmMenu extends JFrame{
     ArrayList<Captage> mesCaptages;
     ModelJTable mdl;
 
-    public FrmMenu()
-    {
+    public FrmMenu() {
         this.setTitle("Devoir - Concepts POO");
         this.setContentPane(pnlRoot);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,13 +24,15 @@ public class FrmMenu extends JFrame{
 
         mesCaptages = new ArrayList<>();
         LoadDatas();
+        mdl = new ModelJTable();
+        mdl.loadDatasCaptage(mesCaptages);
+        tblCaptages.setModel(mdl);
 
-        // A compléter ici
     }
 
     public void LoadDatas()
     {
-        /*
+
         Captage cap1 = new Captage(3,"Captage du bois du pin", 23, 500);
         Captage cap2 = new Captage(5,"Captage du lac", 37, 780);
         Forage for1 = new Forage(1,"Forage de l'enfer", 17, 56, 6);
@@ -41,6 +42,6 @@ public class FrmMenu extends JFrame{
         mesCaptages.add(cap1);mesCaptages.add(cap2);
         mesCaptages.add(for1);mesCaptages.add(for2);
         mesCaptages.add(cuve1);mesCaptages.add(cuve2);
-        */
+
     }
 }
